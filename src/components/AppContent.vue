@@ -1,6 +1,11 @@
 <script>
+import { icons } from '../data/icons'
 export default {
-            
+    data () {
+            return {
+                icons
+            }
+         } 
 }
 </script>
 
@@ -17,8 +22,10 @@ export default {
     <div class="bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-white py-5">
-                    
+                <div class="col-12 text-white py-5 d-flex justify-content-around">
+                    <div v-for="(icon, index) in icons" :key="index">
+                        <img :src="icon.img" />
+                    </div>
                 </div>
             </div>
         </div>
