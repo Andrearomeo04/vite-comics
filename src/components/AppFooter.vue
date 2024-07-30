@@ -1,17 +1,23 @@
 <script>
+import { links } from '../data/footer_links'
 export default {
-    
+    data () {
+        return {
+            links
+        }
+    }
 }
 </script>
 
 <template lang="">
     <div id="background">
-        <div class="container">
+        <div class="container text-white">
             <div class="row">
                 <div class="col-8 d-flex">
-                    <ul>
-                        <li>
-                            
+                    <h2>DC COMICS</h2>
+                    <ul class="list-unstyled">
+                        <li v-for="(link, index) in links" :key="index" class="my-3">
+                            {{ link.text }}
                         </li>
                     </ul>
                 </div>
