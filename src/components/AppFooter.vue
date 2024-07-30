@@ -1,9 +1,9 @@
 <script>
-import { links } from '../data/footer_links'
+import { links_1 } from '../data/footer_links'
 export default {
     data () {
         return {
-            links
+            links_1
         }
     }
 }
@@ -13,16 +13,38 @@ export default {
     <div id="background">
         <div class="container text-white">
             <div class="row">
-                <div class="col-8 d-flex">
+                <div class="col-2 d-flex flex-column">
                     <h2>DC COMICS</h2>
                     <ul class="list-unstyled">
-                        <li v-for="(link, index) in links" :key="index" class="my-3">
+                        <li v-for="(link, index) in links_1" :key="index" class="my-3 text-secondary">
+                            {{ link.text }}
+                        </li>
+                    </ul>
+                    <h2>LOL</h2>
+                    <ul class="list-unstyled">
+                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
+                            {{ link.text }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2 d-flex">
+                    <h2>DC</h2>
+                    <ul class="list-unstyled">
+                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
+                            {{ link.text }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2 d-flex">
+                    <h2>SITES</h2>
+                    <ul class="list-unstyled">
+                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
                             {{ link.text }}
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-4 d-flex">
+                <div class="col-6 d-flex">
                     <div class="logo-footer">
                         <img src="../assets/img/dc-logo-bg.png" alt="logo">
                     </div>

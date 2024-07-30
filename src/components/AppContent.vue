@@ -25,7 +25,7 @@ export default {
                 <div class="col-12 text-white py-5 d-flex justify-content-around">
                     <div v-for="(icon, index) in icons" :key="index" class="d-flex align-items-center inside">
                         <img :src="icon.img" />
-                        <P class="ms-5 mb-0">{{ icon.text }}</p>
+                        <p class="ms-5 mb-0">{{ icon.text }}</p>
                     </div>
                 </div>
             </div>
