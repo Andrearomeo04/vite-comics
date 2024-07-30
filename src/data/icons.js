@@ -6,10 +6,10 @@ import imgSubs from '../assets/img/buy-comics-subscriptions.png';
 
 
 const icons = [
-    { img: imgDigitalComics },
-    { img: imgMerchandise },
-    { img: imgShopLocator },
-    { img: imgSubs },
+    { img: imgDigitalComics, text: 'DIGITAL COMICS' },
+    { img: imgMerchandise, text: 'DC MERCHANDISE'},
+    { img: imgShopLocator, text: 'SUBSCRIPTIONS'},
+    { img: imgSubs, text: 'COMIC SHOP LOCATOR'},
     // { img: imgPower },
 
 ];
