@@ -63,29 +63,21 @@ export default {
     <div id="bg-gray">
         <div class="container">
             <div class="row">
-                <div class="col-8 d-flex text-white py-3">
+                <div class="col-7 d-flex text-white py-3">
                     <div class="sign-up p-3">
                         <h4 class="mb-0">SIGN-UP NOW!</h4>
                     </div>
                 </div>
-                <div class="col-4 d-flex align-items-center socials">
-                    <h3>FOLLOW US</h3>
+                <div class="col-5 d-flex align-items-center justify-content-end socials">
+                    <h5 class="mb-0 me-4">FOLLOW US</h5>
+                    <div v-for="(social, index) in socialIcons">
+                        <img :src="social.img" class="mx-2"></img>
+                    </div>
                 </div>
             </div>
         </div> 
     </div>
-    <div id="bg-black">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 d-flex">
-                    
-                </div>
-                <div class="col-4 d-flex">
-                    
-                </div>
-            </div>
-        </div> 
-    </div>
+    <div id="bg-black"></div>
 </template>
 
 <style scoped lang="scss">
@@ -128,11 +120,11 @@ export default {
     }
 
     #bg-gray {
-        background-color: $footer-color;
+        background-color: $bg-color-1;
     }
 
     #bg-black {
-        background-color: black;
+        background-color: $bg-color-2;
         height: 80px;
     }
 
@@ -144,7 +136,7 @@ export default {
     }
 
     .socials {
-        h3 {
+        h5 {
             color: $color_1
         }
     }

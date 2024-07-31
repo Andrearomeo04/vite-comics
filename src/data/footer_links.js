@@ -1,3 +1,10 @@
+import imgFacebook from '../assets/img/footer-facebook.png';
+import imgTwitter from '../assets/img/footer-twitter.png';
+import imgYoutube from '../assets/img/footer-youtube.png';
+import imgPinterest from '../assets/img/footer-pinterest.png';
+import imgPeriscope from '../assets/img/footer-periscope.png';
+
+
 const links_1 = [
     { text: 'Characters' },
     { text: 'Comics' },
@@ -44,11 +51,11 @@ const links_4 = [
 export {links_4}
 
 const socialIcons = [
-    { img: '../assets/img/footer-facebook' },
-    { img: '../assets/img/footer-twitter' },
-    { img: '../assets/img/footer-youtube' },
-    { img: '../assets/img/footer-pinterest' },
-    { img: '../assets/img/footer-periscope' },
+    { img: imgFacebook },
+    { img: imgTwitter },
+    { img: imgYoutube },
+    { img: imgPinterest },
+    { img: imgPeriscope },
 ]
 
 export {socialIcons}
