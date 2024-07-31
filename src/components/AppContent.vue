@@ -1,19 +1,15 @@
 <script>
 import { icons } from '../data/icons'
 import moviesCard from './moviesCard.vue'
+import comicsData from '../data/dc-comics.json'
 export default {
     components: {
         moviesCard
     },
-    props: {
-        thumb: string,
-        series: string,
-        price: string,
-        type: string
-    },
     data () {
             return {
-                icons
+                icons,
+                comicsData
             }
          } 
 }
@@ -36,17 +32,18 @@ export default {
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-2 text-white py-5">
-                        <div class="thumb">
-                            <img :src="thumb">
-                        </div>
-                        <h6>{{ series }}</h6>
-                        <h6>{{ price }}</h6>
-                        <h6>{{ type }}</h6>
-                    </div>
+                    <moviesCard 
+                        v-for="(info, index) in comicsData"
+                        :key="index"
+                        :thumb="info.thumb"
+                        :series="info.series"
+                        :price="info.price"
+                        :type="info.type"
+                    />
                 </div>
             </div>
         </div>
+        
         <div class="bg-primary">
             <div class="container">
                 <div class="row">

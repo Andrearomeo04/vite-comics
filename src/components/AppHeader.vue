@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template lang="">
-    <div class="bg-white position-fixed w-100 top-0">
+    <div class="bg-white position-fixed w-100 top-0 z-3">
         <div class="container">
             <div class="row">
                 <div class="col-5 d-flex align-items-center">

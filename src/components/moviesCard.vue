@@ -1,32 +1,32 @@
 <script>
 export default {
     props: {
-        thumb: string,
-        series: string,
-        price: string,
-        type: string
+        thumb: String,
+        series: String,
+        price: String,
+        type: String
     },
 }
 
 </script>
 
-<template lang="">
-    <div>
-        <div class="container">
-                <div class="row">
-                    <div class="col-2 text-white py-5">
-                        <div class="thumb">
-                            <img :src="thumb">
-                        </div>
-                        <h6>{{ series }}</h6>
-                        <h6>{{ price }}</h6>
-                        <h6>{{ type }}</h6>
-                    </div>
-                </div>
-            </div>
+<template lang="">    
+    <div class="col-2 text-white py-5">
+        <div class="thumb">
+            <img :src="thumb" class="w-100 cards-height">
+        </div>
+        <h6>{{ series }}</h6>
+        <h6>{{ price }}</h6>
+        <h6>{{ type }}</h6>
     </div>
 </template>
 
-<style lang="">
-    
+<style lang="scss">
+.cards-height {
+    max-height: 200px;
+}
+img {
+    object-fit: cover;
+    object-position: top;
+}
 </style>
