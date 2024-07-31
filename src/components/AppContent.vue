@@ -5,6 +5,12 @@ export default {
     components: {
         moviesCard
     },
+    props: {
+        thumb: string,
+        series: string,
+        price: string,
+        type: string
+    },
     data () {
             return {
                 icons
@@ -21,14 +27,25 @@ export default {
         <div class="bg-black position-relative">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-white py-5">
+                    <div class="col-12 text-white ">
                         <span class="bg-primary py-3 px-4 fw-bold fs-3 blue-series">
                             CURRENT SERIES
                         </span>
                     </div>
                 </div>
             </div>
-            
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 text-white py-5">
+                        <div class="thumb">
+                            <img :src="thumb">
+                        </div>
+                        <h6>{{ series }}</h6>
+                        <h6>{{ price }}</h6>
+                        <h6>{{ type }}</h6>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bg-primary">
             <div class="container">
