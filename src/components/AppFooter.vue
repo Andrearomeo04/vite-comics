@@ -1,9 +1,15 @@
 <script>
 import { links_1 } from '../data/footer_links'
+import { links_2 } from '../data/footer_links'
+import { links_3 } from '../data/footer_links'
+import { links_4 } from '../data/footer_links'
 export default {
     data () {
         return {
-            links_1
+            links_1,
+            links_2,
+            links_3,
+            links_4
         }
     }
 }
@@ -11,42 +17,42 @@ export default {
 
 <template lang="">
     <div id="background">
-        <div class="container text-white">
-            <div class="row">
-                <div class="col-2 d-flex flex-column">
-                    <h2>DC COMICS</h2>
+        <div class="container text-white position-relative">
+            <div class="row py-5">
+                <div class="col-1 d-flex flex-column">
+                    <h6>DC COMICS</h6>
                     <ul class="list-unstyled">
-                        <li v-for="(link, index) in links_1" :key="index" class="my-3 text-secondary">
-                            {{ link.text }}
+                        <li v-for="(link, index) in links_1" :key="index" class="my-2">
+                            <a href="#" class="text-decoration-none">{{ link.text }}</a>
                         </li>
                     </ul>
-                    <h2>LOL</h2>
+                    <h6>LOL</h6>
                     <ul class="list-unstyled">
-                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
-                            {{ link.text }}
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-2 d-flex">
-                    <h2>DC</h2>
-                    <ul class="list-unstyled">
-                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
-                            {{ link.text }}
+                        <li v-for="(link, index) in links_2" :key="index" class="my-2">
+                            <a href="#" class="text-decoration-none">{{ link.text }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-2 d-flex">
-                    <h2>SITES</h2>
+                <div class="col-1 d-flex flex-column">
+                    <h6>DC</h6>
                     <ul class="list-unstyled">
-                        <li v-for="(link, index) in links" :key="index" class="my-3 text-secondary">
-                            {{ link.text }}
+                        <li v-for="(link, index) in links_3" :key="index" class="my-2">
+                            <a href="#" class="text-decoration-none">{{ link.text }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 d-flex flex-column">
+                    <h6>SITES</h6>
+                    <ul class="list-unstyled">
+                        <li v-for="(link, index) in links_4" :key="index" class="my-2">
+                            <a href="#" class=" text-decoration-none">{{ link.text }}</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-6 d-flex">
                     <div class="logo-footer">
-                        <img src="../assets/img/dc-logo-bg.png" alt="logo">
+                        <img src="../assets/img/dc-logo-bg.png" alt="logo" class="position-absolute">
                     </div>
                 </div>
             </div>
@@ -83,13 +89,37 @@ export default {
 
     #background {
         background-image: url(../assets/img/footer-bg.jpg);
+        overflow-y: hidden;
     }
     
     .logo-footer {
         img {
-            width: 400px;
+            width: 700px;
             object-fit: contain;
-            overflow: hidden;
+            top: -120px;
+            right: -50px;
+        }
+    }
+
+    .col-1,
+    .col-4 {
+        ul {
+            li {
+                font-size: 12px;
+                a {
+                    color: $footer-color;
+                }
+            }
+        }
+    }
+    .col-1,
+    .col-4 {
+        ul {
+            li {
+                a:hover {
+                    color: white;
+                }
+            }
         }
     }
 
