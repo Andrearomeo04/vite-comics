@@ -2,7 +2,9 @@
 import { icons } from '../data/icons'
 import moviesCard from './moviesCard.vue'
 export default {
-    components: moviesCard,
+    components: {
+        moviesCard
+    },
     data () {
             return {
                 icons
@@ -16,14 +18,17 @@ export default {
         <div class="jumbo">
             <img src="../assets/img/jumbotron.jpg">
         </div>
-        <div class="bg-black">
+        <div class="bg-black position-relative">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-white py-5">
-                        <h4>Content goes here</h4>
+                        <span class="bg-primary py-3 px-4 fw-bold fs-3 blue-series">
+                            CURRENT SERIES
+                        </span>
                     </div>
                 </div>
             </div>
+            
         </div>
         <div class="bg-primary">
             <div class="container">
@@ -59,5 +64,10 @@ export default {
             width: 100%;
             height:400px;
         }
+    }
+
+    .blue-series {
+        position: absolute;
+        top: -35px;
     }
 </style>
