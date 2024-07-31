@@ -26,7 +26,7 @@ export default {
                             <a href="#" class="text-decoration-none">{{ link.text }}</a>
                         </li>
                     </ul>
-                    <h6>LOL</h6>
+                    <h6>SHOP</h6>
                     <ul class="list-unstyled">
                         <li v-for="(link, index) in links_2" :key="index" class="my-2">
                             <a href="#" class="text-decoration-none">{{ link.text }}</a>
@@ -61,8 +61,10 @@ export default {
     <div id="bg-gray">
         <div class="container">
             <div class="row">
-                <div class="col-8 d-flex">
-                    
+                <div class="col-8 d-flex text-white py-3">
+                    <div class="sign-up p-3">
+                        <h4 class="mb-0">SIGN-UP NOW!</h4>
+                    </div>
                 </div>
                 <div class="col-4 d-flex">
                     
@@ -125,12 +127,18 @@ export default {
 
     #bg-gray {
         background-color: $footer-color;
-        height: 100px;
     }
 
     #bg-black {
         background-color: black;
         height: 80px;
+    }
+
+    .sign-up {
+        border: $border_1;
+        h4{
+            font-size: $font_1;
+        }
     }
     
 </style>
