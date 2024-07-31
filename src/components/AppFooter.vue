@@ -3,13 +3,15 @@ import { links_1 } from '../data/footer_links'
 import { links_2 } from '../data/footer_links'
 import { links_3 } from '../data/footer_links'
 import { links_4 } from '../data/footer_links'
+import {socialIcons} from '../data/footer_links'
 export default {
     data () {
         return {
             links_1,
             links_2,
             links_3,
-            links_4
+            links_4,
+            socialIcons
         }
     }
 }
@@ -66,8 +68,8 @@ export default {
                         <h4 class="mb-0">SIGN-UP NOW!</h4>
                     </div>
                 </div>
-                <div class="col-4 d-flex">
-                    
+                <div class="col-4 d-flex align-items-center socials">
+                    <h3>FOLLOW US</h3>
                 </div>
             </div>
         </div> 
@@ -138,6 +140,12 @@ export default {
         border: $border_1;
         h4{
             font-size: $font_1;
+        }
+    }
+
+    .socials {
+        h3 {
+            color: $color_1
         }
     }
     

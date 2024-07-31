@@ -42,3 +42,14 @@ const links_4 = [
 ]
 
 export {links_4}
+
+const socialIcons = [
+    { img: '../assets/img/footer-facebook' },
+    { img: '../assets/img/footer-twitter' },
+    { img: '../assets/img/footer-youtube' },
+    { img: '../assets/img/footer-pinterest' },
+    { img: '../assets/img/footer-periscope' },
+]
+
+export {socialIcons}
+
