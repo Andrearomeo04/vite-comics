@@ -130,6 +130,7 @@ export default {
 
     .sign-up {
         border: $border_1;
+        cursor: pointer;
         h4{
             font-size: $font_1;
         }

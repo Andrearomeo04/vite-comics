@@ -3,9 +3,15 @@ import { mainMenu } from '../data/menues'
 export default {
          data () {
             return {
-                mainMenu
+                mainMenu,
+                activeIndex: 0,
             }
-         } 
+         },
+         methods: {
+            setActive (index) {
+                this.activeIndex = index
+            }
+         }
 }
 </script>
 
@@ -20,7 +26,7 @@ export default {
                 </div>
                 <div class="col-7 d-flex align-items-center">
                         <ul class="list-unstyled d-flex mb-0">
-                            <li v-for="(items, index) in mainMenu" :key="index" class="mx-3" :class="items.active ? 'active' : ''">
+                            <li v-for="(items, index) in mainMenu" :key="index" class="mx-3" :class="index === activeIndex ? 'active' : ''" @click="setActive(index)">
                                 {{ items.text }}
                             </li>
                         </ul>

@@ -30,7 +30,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container pt-4">
                 <div class="row">
                     <moviesCard 
                         v-for="(info, index) in comicsData"
@@ -83,5 +83,6 @@ export default {
     .blue-series {
         position: absolute;
         top: -35px;
+        left: 280px;
     }
 </style>
